@@ -8,15 +8,15 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
  
-		
 		Scanner scanner = new Scanner(System.in);
 		Random random = new Random();
 		int hiddenNumber = random.nextInt(100) + 1;
 		int guess;
-		int player = scanner.nextInt();
-		
-		System.out.println("Pick a number between 1 and 100: ");
+	
 		for (guess = 0; guess < 6; guess++) {
+			System.out.println("Pick a number between 1 and 100: ");
+			int player = scanner.nextInt();
+			
 			if (player == hiddenNumber) {
 				System.out.println("You win!");
 				break;
@@ -37,6 +37,7 @@ public class Main {
 			}
 			
 		}
+		scanner.close();
 		
 	}
 }
