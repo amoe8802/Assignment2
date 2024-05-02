@@ -13,7 +13,7 @@ public class Main {
 		int hiddenNumber = random.nextInt(100) + 1;
 		int guess;
 	
-		for (guess = 0; guess < 6; guess++) {
+		for (guess = 1; guess < 6; guess++) {
 			System.out.println("Pick a number between 1 and 100: ");
 			int player = scanner.nextInt();
 			
@@ -31,11 +31,11 @@ public class Main {
 			else if (player > hiddenNumber) {
 				System.out.println("Please pick a lower number");
 			}
-			else  { guess = 5;
-			System.out.println("You lose, the number to guess was" + hiddenNumber);
-				break;
-			}
 			
+			if ( guess == 5) {
+			System.out.println("You lose, the number to guess was " + hiddenNumber);
+			}
+		
 		}
 		scanner.close();
 		
